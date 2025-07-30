@@ -1,38 +1,36 @@
-var imagen = document.getElementById("miImagen");
-    var btnBN = document.getElementById("btnBN");
-    var btnBlur = document.getElementById("btnBlur");
-    var btnZoom = document.getElementById("btnZoom");
+//Paso 1: Captura de variables
 
-    var botones = [btnBN, btnBlur, btnZoom];
+const pantalla = document.getElementById("miImagen"); // Captura de la imagen
+  const btnBN = document.getElementById("btnBN"); // Captura del botón 1
+  const btnBlur = document.getElementById("btnBlur"); // Captura del botón 2
+  const btnZoom = document.getElementById("btnZoom"); // Captura del botón 3
 
-    function resetearImagen() {
-      imagen.style.filter = "none";
-      imagen.style.transform = "none";
-    }
+//Paso 2: Funciones
 
-    function desactivarTodos() {
-      for (var i = 0; i < botones.length; i++) {
-        botones[i].classList.remove("activo");
-      }
-    }
+function blancoYNegro() {
+  console.log("Imagen modificada")
+  pantalla.style.filter = "grayscale(100%)"; // Aplica el filtro de escala de grises a la imagen
+  /* btnBN.style.backgroundColor = "blueviolet" // Cambia el color de fondo del botón 1
+  btnBN.style.color = "white"; // Cambia el color del texto del botón 1
+  btnBN.style.height = "200px"; // Cambia la altura del botón 1
+  btnBN.style.borderRadius = "50%"; // Cambia el ancho del botón 1 */
+}
 
-    btnBN.addEventListener("click", function() {
-      resetearImagen();
-      imagen.style.filter = "grayscale(100%)";
-      desactivarTodos();
-      btnBN.classList.add("activo");
-    });
+function desenfocar () {
+  console.log("Imagen modificada")
+  pantalla.style.filter ="blur(5px) "
+   
+}
 
-    btnBlur.addEventListener("click", function() {
-      resetearImagen();
-      imagen.style.filter = "blur(4px)";
-      desactivarTodos();
-      btnBlur.classList.add("activo");
-    });
+function zoom () {
+  console.log("Imagen modificada")
+  pantalla.style.transform = "scale(1.1) rotate(8deg)" ; // Aplica un zoom a la imagen
+}
+ 
+//Paso 3: Eventos
 
-    btnZoom.addEventListener("click", function() {
-      resetearImagen();
-      imagen.style.transform = "scale(1.1) rotate(8deg)";
-      desactivarTodos();
-      btnZoom.classList.add("activo");
-    });
+btnBN.addEventListener("click", blancoYNegro); // Evento para el botón 1 
+
+btnBlur.addEventListener("click", desenfocar); // Evento para el botón 2
+
+btnZoom.addEventListener("click", zoom); // Evento para el botón 3
