@@ -25,28 +25,33 @@
     position: absolute;
     top: 32%;
     left: 52%;
+    
 }
 
 .moneda-1{
     position: absolute;
     top: 35%;
     left: 25%;
+    cursor: pointer;
 }
 
 .moneda-2{
     position: absolute;
     top: 35%;
     left: 34%;
+    cursor: pointer;
 }
 
 .moneda-3{
     position: absolute;
-    top: 52%;
+    top: 53%;
     left: 88%;
+    cursor: pointer;
 }
 
 .corazon{
     position: absolute;
     top: 18%;
-    left: 56%;
+    left: 57%;
+    cursor: pointer;
 }
