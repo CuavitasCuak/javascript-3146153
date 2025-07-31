@@ -1,0 +1,52 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.pantalla{
+    position: relative; /*Relative porque es padre*/
+    width: 750px;
+    height: 500px;
+    margin: auto;
+}
+
+.pantalla .fondo{ 
+    width: 100%;
+}
+
+.bloque1{
+    position: absolute; /*absolute porque es hijo*/
+    top: 47%;
+    left: 20%;
+}
+
+.bloque2{
+    position: absolute;
+    top: 32%;
+    left: 52%;
+}
+
+.moneda-1{
+    position: absolute;
+    top: 35%;
+    left: 25%;
+}
+
+.moneda-2{
+    position: absolute;
+    top: 35%;
+    left: 34%;
+}
+
+.moneda-3{
+    position: absolute;
+    top: 52%;
+    left: 88%;
+}
+
+.corazon{
+    position: absolute;
+    top: 18%;
+    left: 56%;
+}
