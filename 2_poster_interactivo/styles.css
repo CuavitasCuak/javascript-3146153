@@ -19,12 +19,14 @@
     position: absolute; /*absolute porque es hijo*/
     top: 47%;
     left: 20%;
+    animation: rebotar-1 5s ease-in-out infinite;
 }
 
 .bloque2{
     position: absolute;
     top: 32%;
     left: 52%;
+    animation: rebotar-2 5s ease-in-out infinite;
     
 }
 
@@ -47,6 +49,7 @@
     top: 53%;
     left: 88%;
     cursor: pointer;
+
 }
 
 .corazon{
@@ -63,17 +66,7 @@
     animation: salto 0.6s ease forwards;
 }
 
-/*Animación moneda desaparece*/
 
-@keyframes salto{
-    0% {transform: translateY(0); opacity: 1;}
-
-    30% {transform: translateY(-60px);}
-
-    100% {transform: translateY(0px); opacity: 0;} 
-}
-
-/* Contador monedas y corazones */
 
     .hud {
       position: absolute;
@@ -98,7 +91,35 @@
     }
 
     .hud-item img {
-      width: 24px;
-      height: 24px;
-      margin-right: 8px;
-    }
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    animation: girar 2s linear infinite; /* Gira constantemente */
+}
+/*Animación moneda desaparece*/
+
+@keyframes salto{
+    0% {transform: translateY(0); opacity: 1;}
+
+    30% {transform: translateY(-60px);}
+
+    100% {transform: translateY(0px); opacity: 0;} 
+}
+
+/* Contador monedas y corazones */
+
+@keyframes rebotar-1 {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(30px); }
+  100% { transform: translateX(-30px); }
+}
+
+@keyframes rebotar-2 {
+  0% { transform: translatex(0); }
+  50% { transform: translatex(-30px); }
+  100% { transform: translatex(30); }
+}
+ 
+
+
+
