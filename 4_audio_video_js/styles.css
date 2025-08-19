@@ -38,12 +38,12 @@ body {
 }
 
 .video-container video, .image-container img {
-    border: 2px solid #ff4d4d;
+    border: 2px solid #c25ceb;
     border-radius: 8px;
 }
 
 button {
-    background-color: #ff4d4d;
+    background-color: #c25ceb;
     color: white;
     border: none;
     padding: 10px;
@@ -55,5 +55,5 @@ button {
 }
 
 button:hover {
-    background-color: #ff3333;
+    background-color: #851caf;
 }

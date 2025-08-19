@@ -9,23 +9,35 @@
 <body>
     <div class="container">
         <div class="video-container">
-            <video id="video" width="400" controls>
+            <video id="video" width="400">
                 <source src=".//assets/gatito.mp4" type="video/mp4">
                 Tu navegador no soporta el formato de video.
             </video>
             <div class="buttons">
                 <button id="play-video">Play</button>
                 <button id="stop-video">Stop</button>
-            </div>
+            </div> 
         </div>
+
+
+
+
         <div class="image-container">
+            
             <div class="image" id="image1">
                 <img class="img-min" src="./assets/pochacco.jpg" alt="Imagen 1">
                 <button id="play-stop-img1">Play / Stop</button>
+                <audio id="audio-1">
+                <source src="./assets/sonido.mp3" type="audio/mp3">
+                </audio>
             </div>
+
             <div class="image" id="image2">
                 <img class="img-min" src="./assets/purin.jpg" alt="Imagen 1">
                 <button id="play-stop-img2">Play / Stop</button>
+                <audio id="audio-2">
+                <source src="./assets/sonido.mp3" type="audio/mp3">
+                </audio>
             </div>
         </div>
     </div>
