@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 
-
+.d-none{
+    display: none;
+}
 
 .pantalla{
     position: relative;
@@ -140,7 +142,7 @@
     animation: movimiento 5s ease-in-out infinite;
 }
 
-button { 
+#play-stop { 
     position: absolute;
     bottom: 450px;
     background-color: #c25ceb;
@@ -155,9 +157,25 @@ button {
     margin: 5px;
 }
 
-button:hover {
+#play-stop:hover {
     background-color: #851caf;
 }
+
+.navegacion{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.filter-style-2{
+    filter: invert(100%); 
+}
+
+.filter-style-3{
+    filter: sepia(70%);
+}
+
 
 @keyframes movimiento {
     0% { transform: translateY(40px); }

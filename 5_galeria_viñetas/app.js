@@ -153,3 +153,39 @@ document.querySelector('.arriba').addEventListener('click', moverArriba);
 document.querySelector('.abajo').addEventListener('click', moverAbajo);
 document.querySelector('.dere').addEventListener('click', moverIzquierda); 
 document.querySelector('.izqui').addEventListener('click', moverDerecha);    
+
+
+//siguiente galeria
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+const escena1 = document.querySelector('.escena-1');
+const escena2 = document.querySelector('.escena-2');
+const escena3 = document.querySelector('.escena-3');
+let i = 1; 
+
+next.addEventListener('click', function() {
+    if(i ===1){
+        escena1.classList.add('d-none');
+        escena2.classList.remove('d-none');
+        i++
+    }
+    else if(i === 2){
+        escena2.classList.add('d-none');
+        escena3.classList.remove('d-none');
+        i++
+    }   
+})
+
+
+prev.addEventListener('click', function() {
+    if(i ===1){
+        escena1.classList.add('d-none');
+        escena3.classList.remove('d-none');
+        i--
+    }
+    else if(i === 2){
+        escena3.classList.add('d-none');
+        escena2.classList.remove('d-none');
+        i--
+    }   
+})
