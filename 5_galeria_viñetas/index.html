@@ -1,170 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego</title>
-    <link rel="stylesheet" href="./styles.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrusel Escenas</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-<div class="comic">
-    <div class="escena-1">
-     <div class="pantalla">
+  <div class="carrusel">
+    <!-- Botón anterior -->
+    <button class="btn anterior">&#10094;</button>
 
-        <div class="contador">
-      <div class="contador-ener">
-        <img src="./assets/conta-ener.png" alt="energia">
-        <span id="contador-energia">0</span>
-      </div>
-      <div class="contador-cora">
-        <img src="./assets/conta-cora.png" alt="corazón">
-        <span id="contador-corazones">0</span>
-      </div>
-      </div>
-
-
-        <div>
-        <img class="fondo" src="./assets/fondo.png" alt="">
-        <img class="heart corazon-1" src="./assets/corazon-1.png" alt="">
-        <img class="heart corazon-2" src="./assets/corazon-2.png" alt="">
-        <img class="arbol" src="./assets/arbol.png" alt="">
-        <img class="dere" src="./assets/dere.png" alt="">
-        <audio id="audio-1">
-                <source src="./assets/flechas.mp3" type="audio/mp3">
-                </audio>
-        <img class="izqui" src="./assets/izqui.png" alt="">
-        <img class="arriba" src="./assets/arriba.png" alt="">
-        <img class="abajo" src="./assets/abajo.png" alt="">
-        <img class="roca-1" src="./assets/roca-1.png" alt="">
-        <img class="roca-2" src="./assets/roca-2.png" alt="">
-        <img class="energy energia-1" src="./assets/energia-1.png"alt="">
-        <img class="energy energia-2" src="./assets/energia-2.png" alt="">
-        <img class="personaje" src="./assets/personaje.png" alt="">
+    <!-- Escenas -->
+    <div class="escenas">
+      <!-- Escena 1 -->
+      <div class="escena activa">
+        <div class="pantalla">
+          <div class="hud">
+            <div class="hud-item">
+              <img src="./assets/MONEDA1.png" alt="Moneda">
+              <span id="contador-monedas">0</span>
+            </div>
+            <div class="hud-item">
+              <img src="./assets/coarazon1.png" alt="Corazón">
+              <span id="contador-corazones">0</span>
+            </div>
+          </div>
+          <img class="fondo" src="./assets/fondo2.png" alt="">
+          <img class="bloque1" src="./assets/ladrillos2.png" alt="">
+          <img class="bloque2" src="./assets/ladrillo1.png" alt="">
+          <img class="coin moneda1" src="./assets/moneda1.png" alt="">
+          <img class="coin moneda2" src="./assets/moneda 2.png" alt="">
+          <img class="coin moneda3" src="./assets/moneda 3.png" alt="">
+          <img class="corazon" src="./assets/coarazon1.png" alt="">
         </div>
-        <audio id="audio-2">
-                <source src="./assets/corazon.mp3" type="audio/mp3">
-                </audio>
-        <audio id="audio-3">
-                <source src="./assets/energy.mp3" type="audio/mp3">
-                </audio>
-                <audio id="audio-4">
-                <source src="./assets/background.mp3" type="audio/mp3">
-                </audio>
-                <button id="play-stop">Play</button>
-  
-
-
-  </div>
-  </div>
-
-  <div class="d-none escena-2 filter-style-2">
-     <div class="pantalla">
-
-        <div class="contador">
-      <div class="contador-ener">
-        <img src="./assets/conta-ener.png" alt="energia">
-        <span id="contador-energia">0</span>
-      </div>
-      <div class="contador-cora">
-        <img src="./assets/conta-cora.png" alt="corazón">
-        <span id="contador-corazones">0</span>
-      </div>
       </div>
 
-
-        <div>
-        <img class="fondo" src="./assets/fondo.png" alt="">
-        <img class="heart corazon-1" src="./assets/corazon-1.png" alt="">
-        <img class="heart corazon-2" src="./assets/corazon-2.png" alt="">
-        <img class="arbol" src="./assets/arbol.png" alt="">
-        <img class="dere" src="./assets/dere.png" alt="">
-        <audio id="audio-1">
-                <source src="./assets/flechas.mp3" type="audio/mp3">
-                </audio>
-        <img class="izqui" src="./assets/izqui.png" alt="">
-        <img class="arriba" src="./assets/arriba.png" alt="">
-        <img class="abajo" src="./assets/abajo.png" alt="">
-        <img class="roca-1" src="./assets/roca-1.png" alt="">
-        <img class="roca-2" src="./assets/roca-2.png" alt="">
-        <img class="energy energia-1" src="./assets/energia-1.png"alt="">
-        <img class="energy energia-2" src="./assets/energia-2.png" alt="">
-        <img class="personaje" src="./assets/personaje.png" alt="">
+      <!-- Escena 2  -->
+      <div class="escena">
+        <div class="pantalla">
+          <img src="./assets/fondo3.png" alt="">
         </div>
-        <audio id="audio-2">
-                <source src="./assets/corazon.mp3" type="audio/mp3">
-                </audio>
-        <audio id="audio-3">
-                <source src="./assets/energy.mp3" type="audio/mp3">
-                </audio>
-                <audio id="audio-4">
-                <source src="./assets/background.mp3" type="audio/mp3">
-                </audio>
-                <button id="play-stop">Play</button>
-  
-
-
-  </div>
-  </div>
-  <div class="d-none escena-3 filter-style-3">
-     <div class="pantalla">
-
-        <div class="contador">
-      <div class="contador-ener">
-        <img src="./assets/conta-ener.png" alt="energia">
-        <span id="contador-energia">0</span>
-      </div>
-      <div class="contador-cora">
-        <img src="./assets/conta-cora.png" alt="corazón">
-        <span id="contador-corazones">0</span>
-      </div>
       </div>
 
-
-        <div>
-        <img class="fondo" src="./assets/fondo.png" alt="">
-        <img class="heart corazon-1" src="./assets/corazon-1.png" alt="">
-        <img class="heart corazon-2" src="./assets/corazon-2.png" alt="">
-        <img class="arbol" src="./assets/arbol.png" alt="">
-        <img class="dere" src="./assets/dere.png" alt="">
-        <audio id="audio-1">
-                <source src="./assets/flechas.mp3" type="audio/mp3">
-                </audio>
-        <img class="izqui" src="./assets/izqui.png" alt="">
-        <img class="arriba" src="./assets/arriba.png" alt="">
-        <img class="abajo" src="./assets/abajo.png" alt="">
-        <img class="roca-1" src="./assets/roca-1.png" alt="">
-        <img class="roca-2" src="./assets/roca-2.png" alt="">
-        <img class="energy energia-1" src="./assets/energia-1.png"alt="">
-        <img class="energy energia-2" src="./assets/energia-2.png" alt="">
-        <img class="personaje" src="./assets/personaje.png" alt="">
+      <!-- Escena 3 -->
+      <div class="escena">
+        <div class="pantalla">
+          <img src="./assets/fondo4.png" alt="">
+          
         </div>
-        <audio id="audio-2">
-                <source src="./assets/corazon.mp3" type="audio/mp3">
-                </audio>
-        <audio id="audio-3">
-                <source src="./assets/energy.mp3" type="audio/mp3">
-                </audio>
-                <audio id="audio-4">
-                <source src="./assets/background.mp3" type="audio/mp3">
-                </audio>
-                <button id="play-stop">Play</button>
-  
-
-
+      </div>
     </div>
+
+    <!-- Botón siguiente -->
+    <button class="btn siguiente">&#10095;</button>
   </div>
-</div>
 
-<div class="navegacion">
-  <button class="prev"> Anterior </button>
-  <button class="next"> Siguiente </button>
+  <!-- Miniaturas -->
+  <div class="miniaturas">
+    <img src="./assets/fondo2.png" data-index="0" alt="Miniatura 1">
+    <img src="./assets/fondo3.png" data-index="1" alt="Miniatura 2">
+    <img src="./assets/fondo4.png" data-index="2" alt="Miniatura 3">
+  </div>
 
-</div>
-   
-
-   
-    <script src="./app.js"></script>
-    
+  <script src="./app.js"></script>
 </body>
 </html>
