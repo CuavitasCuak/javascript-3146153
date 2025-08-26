@@ -65,3 +65,50 @@ btnAnterior.addEventListener("click", function() {
 
     mostrarEscena(indice);
 })
+
+miniaturas.forEach(function(miniatura, i) {
+    miniatura.addEventListener("click", function() {
+        mostrarEscena(i);
+    })
+})
+
+const audio1 = document.querySelector(".audio-escena");
+const Playstopimg1 = document.querySelector(".btn-audio");
+
+Playstopimg1.addEventListener("click", function() {
+    if (audio1.paused) {
+        audio1.play();
+        Playstopimg1.textContent = "⏸️";
+    } else {
+        audio1.pause();
+        Playstopimg1.textContent = "▶️";
+    }
+});
+
+
+const audio2 = document.querySelector(".audio-escena-2");
+const Playstopimg2 = document.querySelector(".btn-audio-2");
+
+Playstopimg2.addEventListener("click", function() {
+    if (audio2.paused) {
+        audio2.play();
+        Playstopimg2.textContent = "⏸️";
+    } else {
+        audio2.pause();
+        Playstopimg2.textContent = "▶️";
+    }
+});
+
+
+const audio0 = document.querySelector(".audio-escena-1");
+const Playstopimg0 = document.querySelector(".btn-audio-1");
+
+Playstopimg0.addEventListener("click", function() {
+    if (audio0.paused) {
+        audio0.play();
+        Playstopimg0.textContent = "⏸️";
+    } else {
+        audio0.pause();
+        Playstopimg0.textContent = "▶️";
+    }
+});
