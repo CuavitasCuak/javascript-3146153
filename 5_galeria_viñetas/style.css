@@ -189,6 +189,30 @@
 .miniaturas img:hover {
   border: 3px solid #FFD700;
 }
+.play-stop-img3 {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-
-
+#play-stop-img3:hover {
+    background-color: rgb(0, 110, 255);
+}
+#play-stop-img3{
+    background-color: rgb(127, 129, 129);
+    border: none;
+    position: absolute;
+    top: 12%;
+    left: 65.7%;
+    cursor: pointer;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 16px;
+}

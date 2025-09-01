@@ -1,4 +1,3 @@
-
 const monedas = document.querySelectorAll(".coin");
 const corazones = document.querySelectorAll(".corazon");
 const contadorMonedas = document.querySelector("#contador-monedas");
@@ -28,7 +27,6 @@ corazones.forEach(function (corazon) {
     })
 })
 
-//Galeria 
 
 const escenas = document.querySelectorAll(".escena");
 const btnAnterior = document.querySelector(".anterior");
@@ -36,79 +34,80 @@ const btnSiguiente = document.querySelector(".siguiente");
 const miniaturas = document.querySelectorAll(".miniaturas img");
 let indice = 0;
 
+/* console.log(escenas);
+console.log(escenas[1]); */
 function mostrarEscena(i) {
-    for (let j = 0; j < escenas.length; j++) {
+ /*    console.log (escenas [i]) */
+    for (let j = 0; j< escenas.length; j++) {
         escenas[j].classList.remove("activa");
-        
     }
     escenas[i].classList.add("activa");
-
     indice = i;
 }
 
-//boton siguiente
 
+/* boton siguiente */
 btnSiguiente.addEventListener("click", function() {
-    indice ++;
+    indice = indice + 1
     if (indice >= escenas.length) {
         indice = 0;
     }
-
     mostrarEscena(indice);
 })
 
+/* boton anterior */
 btnAnterior.addEventListener("click", function() {
-    indice --;
+    indice = indice - 1
     if (indice < 0) {
-        indice = escenas.length - 1;
+        indice= escenas.length -1
     }
-
     mostrarEscena(indice);
 })
 
+/* MINIATURAS */
 miniaturas.forEach(function(miniatura, i) {
     miniatura.addEventListener("click", function() {
+        console.log("Miniatura " + i + " clickeada");
         mostrarEscena(i);
     })
 })
+const audios = [
+    document.getElementById("audio1"),
+    document.getElementById("audio2"),
+    document.getElementById("audio3")
+];
 
-const audio1 = document.querySelector(".audio-escena");
-const Playstopimg1 = document.querySelector(".btn-audio");
+let audioActivo = null;
+let sonidoReproduciendo = false;
 
-Playstopimg1.addEventListener("click", function() {
-    if (audio1.paused) {
-        audio1.play();
-        Playstopimg1.textContent = "⏸️";
-    } else {
-        audio1.pause();
-        Playstopimg1.textContent = "▶️";
+function reproducirSonidoEscena(i) {
+    // Detener audio anterior si existe
+    if (audioActivo) {
+        audioActivo.pause();
+        
     }
-});
-
-
-const audio2 = document.querySelector(".audio-escena-2");
-const Playstopimg2 = document.querySelector(".btn-audio-2");
-
-Playstopimg2.addEventListener("click", function() {
-    if (audio2.paused) {
-        audio2.play();
-        Playstopimg2.textContent = "⏸️";
-    } else {
-        audio2.pause();
-        Playstopimg2.textContent = "▶️";
+    if (sonidoReproduciendo) {
+        audioActivo = audios[i];
+        audioActivo.play();
     }
-});
+}
 
+// Modificar función mostrarEscena para activar sonido
+const funcionOriginal = mostrarEscena;
+mostrarEscena = function(i) {
+    funcionOriginal(i);
+    reproducirSonidoEscena(i);
+};
 
-const audio0 = document.querySelector(".audio-escena-1");
-const Playstopimg0 = document.querySelector(".btn-audio-1");
+// Botón Play/Stop
+const btnPlayStop = document.getElementById("play-stop-img3");
+btnPlayStop.addEventListener("click", function () {
+    sonidoReproduciendo = !sonidoReproduciendo;
+    btnPlayStop.textContent = sonidoReproduciendo ? "Stop" : "Play";
 
-Playstopimg0.addEventListener("click", function() {
-    if (audio0.paused) {
-        audio0.play();
-        Playstopimg0.textContent = "⏸️";
-    } else {
-        audio0.pause();
-        Playstopimg0.textContent = "▶️";
+    if (sonidoReproduciendo) {
+        reproducirSonidoEscena(indice);
+    } else if (audioActivo) {
+        audioActivo.pause();
     }
 });

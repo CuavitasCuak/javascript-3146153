@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrusel Escenas</title>
   <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
   <div class="carrusel">
     <!-- Botón anterior -->
@@ -35,62 +33,42 @@
           <img class="coin moneda2" src="./assets/moneda 2.png" alt="">
           <img class="coin moneda3" src="./assets/moneda 3.png" alt="">
           <img class="corazon" src="./assets/coarazon1.png" alt="">
-          
-        </div>
-
-        <button class="btn-audio-1">►</button>
-
-        <audio class="audio-escena-1">
-          <source src="./assets/kawaii.mp3" type="audio/mp3">
-        </audio>
         </div>
       </div>
 
       <!-- Escena 2  -->
       <div class="escena">
         <div class="pantalla">
-          <img src="./assets/fondo3.png" alt="">
+           <img class="fondo" src="./assets/fondo3.png" data-index="1" alt="Miniatura 2">
         </div>
-        
-        <button class="btn-audio">►</button>
-
-        <audio class="audio-escena">
-          <source src="./assets/cat-dreams-kawaii-chill-future-house-259197.mp3" type="audio/mp3">
-        </audio>
-  
- 
-</div>
       </div>
-      
 
       <!-- Escena 3 -->
       <div class="escena">
         <div class="pantalla">
-          <img src="./assets/fondo4.png" alt="">
-           <button class="btn siguiente">&#10095;</button>
-          
-      </div> 
-      <button class="btn-audio-2">►</button>
-      
-        <audio class="audio-escena-2">
-          <source src="./assets/kawaii-drops-no-copy-rights-386532.mp3" type="audio/mp3">
-        </audio>
+          <img class="fondo" src="./assets/fondo4.png" data-index="2" alt="Miniatura 3">
         </div>
-        <!-- Botón siguiente -->
-       <button class="btn siguiente">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- Botón siguiente -->
+    <button class="btn siguiente">&#10095;</button>
   </div>
 
-
-  
-
-  
-   
   <!-- Miniaturas -->
   <div class="miniaturas">
     <img src="./assets/fondo2.png" data-index="0" alt="Miniatura 1">
     <img src="./assets/fondo3.png" data-index="1" alt="Miniatura 2">
     <img src="./assets/fondo4.png" data-index="2" alt="Miniatura 3">
   </div>
+
+ 
+  <button id="play-stop-img3">Play</button>
+
+ 
+  <audio id="audio1" src="./assets/cat-dreams-kawaii-chill-future-house-259197.mp3"></audio>
+  <audio id="audio2" src="./assets/kawaii-drops-no-copy-rights-386532.mp3"></audio>
+  <audio id="audio3" src="./assets/kawaii.mp3"></audio>
 
   <script src="./app.js"></script>
 </body>
